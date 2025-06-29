@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Faizan's Online Store 🛍️</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>🛒 Faizan's Online Store</h1>
+
+    <div class="header-right">
+      <input type="text" id="searchInput" placeholder="Search products..." />
+      <button id="logoutBtn" style="background:#dc3545;color:white;border:none;padding:8px 12px;border-radius:6px;cursor:pointer;">Logout</button>
+
+      <div class="mini-cart">
+        <span id="cart-icon">🧺</span>
+        <span id="cart-count">0</span>
+        <span>Total: Rs. <span id="total">0</span></span>
+        <ul id="cart-items"></ul>
+        <button id="clearCartBtn" style="margin-top:8px;background:#dc3545;color:#fff;border:none;padding:5px 10px;border-radius:6px;cursor:pointer;">Clear Cart</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Slideshow Banner -->
+  <div id="product-slideshow" class="product-slideshow">
+    <img id="slideshow-image" src="" alt="Product Slideshow">
+    <div id="slideshow-caption"></div>
+  </div>
+
+  <div class="main-content">
+    <main class="products-container" id="products-container"></main>
+
+    <aside id="clicked-product" class="clicked-product" style="display:none;">
+      <img id="clicked-img" src="" alt="Clicked Product" />
+      <h2 id="clicked-name"></h2>
+      <p id="clicked-price"></p>
+      <p id="clicked-description"></p>
+
+      <label for="quantityInput">Quantity:</label>
+      <input type="number" id="quantityInput" value="1" min="1" style="width: 60px;" />
+
+      <div class="action-buttons">
+        <button class="buy-btn">Buy Now</button>
+        <button class="cart-btn">Add to Cart</button>
+      </div>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
